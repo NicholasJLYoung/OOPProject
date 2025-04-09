@@ -14,5 +14,11 @@ namespace LMSBL
             Debug.WriteLine($"{Name} is a Librarian");
         }
         
+        public Librarian(string name, int id, string role)
+        {
+            this.Name = name;
+            this.UserID = id;
+            this.Role = role;
+        }
     }
 }

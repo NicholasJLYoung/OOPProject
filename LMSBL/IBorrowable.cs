@@ -8,7 +8,7 @@ namespace LMSBL
 {
     public interface IBorrowable
     {
-        public abstract void Borrow();
-        public abstract void Return();
+        public abstract void Borrow(User u);
+        public abstract void Return(User u);
     }
 }
