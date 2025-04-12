@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             dgvBooks = new DataGridView();
-            Title = new DataGridViewTextBoxColumn();
-            Availablility = new DataGridViewTextBoxColumn();
-            Author = new DataGridViewTextBoxColumn();
             btnBorrow = new Button();
             btnReturn = new Button();
             btnAdd = new Button();
@@ -42,69 +39,64 @@
             // 
             // dgvBooks
             // 
+            dgvBooks.AllowUserToAddRows = false;
             dgvBooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvBooks.Columns.AddRange(new DataGridViewColumn[] { Title, Availablility, Author });
-            dgvBooks.Location = new Point(12, 12);
+            dgvBooks.Location = new Point(17, 20);
+            dgvBooks.Margin = new Padding(4, 5, 4, 5);
             dgvBooks.Name = "dgvBooks";
-            dgvBooks.Size = new Size(476, 258);
+            dgvBooks.RowHeadersWidth = 62;
+            dgvBooks.Size = new Size(680, 430);
             dgvBooks.TabIndex = 0;
-            // 
-            // Title
-            // 
-            Title.HeaderText = "Title";
-            Title.Name = "Title";
-            // 
-            // Availablility
-            // 
-            Availablility.HeaderText = "Availability";
-            Availablility.Name = "Availablility";
-            // 
-            // Author
-            // 
-            Author.HeaderText = "Author";
-            Author.Name = "Author";
             // 
             // btnBorrow
             // 
-            btnBorrow.Location = new Point(9, 276);
+            btnBorrow.Location = new Point(13, 460);
+            btnBorrow.Margin = new Padding(4, 5, 4, 5);
             btnBorrow.Name = "btnBorrow";
-            btnBorrow.Size = new Size(75, 23);
+            btnBorrow.Size = new Size(107, 38);
             btnBorrow.TabIndex = 1;
             btnBorrow.Text = "Borrow";
             btnBorrow.UseVisualStyleBackColor = true;
+            btnBorrow.Click += btnBorrow_Click;
             // 
             // btnReturn
             // 
-            btnReturn.Location = new Point(90, 276);
+            btnReturn.Location = new Point(129, 460);
+            btnReturn.Margin = new Padding(4, 5, 4, 5);
             btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(75, 23);
+            btnReturn.Size = new Size(107, 38);
             btnReturn.TabIndex = 2;
             btnReturn.Text = "Return";
             btnReturn.UseVisualStyleBackColor = true;
+            btnReturn.Click += btnReturn_Click;
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(171, 276);
+            btnAdd.Location = new Point(244, 460);
+            btnAdd.Margin = new Padding(4, 5, 4, 5);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(75, 23);
+            btnAdd.Size = new Size(107, 38);
             btnAdd.TabIndex = 3;
             btnAdd.Text = "Add Book";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // cboUsers
             // 
             cboUsers.FormattingEnabled = true;
-            cboUsers.Location = new Point(350, 277);
+            cboUsers.Location = new Point(500, 462);
+            cboUsers.Margin = new Padding(4, 5, 4, 5);
             cboUsers.Name = "cboUsers";
-            cboUsers.Size = new Size(121, 23);
+            cboUsers.Size = new Size(171, 33);
             cboUsers.TabIndex = 4;
             cboUsers.SelectedIndexChanged += cboUsers_SelectedIndexChanged;
             // 
             // btnClose
             // 
-            btnClose.Location = new Point(252, 277);
+            btnClose.Location = new Point(360, 462);
+            btnClose.Margin = new Padding(4, 5, 4, 5);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(75, 23);
+            btnClose.Size = new Size(107, 38);
             btnClose.TabIndex = 5;
             btnClose.Text = "Close";
             btnClose.UseVisualStyleBackColor = true;
@@ -112,15 +104,16 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(727, 519);
             Controls.Add(btnClose);
             Controls.Add(cboUsers);
             Controls.Add(btnAdd);
             Controls.Add(btnReturn);
             Controls.Add(btnBorrow);
             Controls.Add(dgvBooks);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -131,9 +124,6 @@
         #endregion
 
         private DataGridView dgvBooks;
-        private DataGridViewTextBoxColumn Title;
-        private DataGridViewTextBoxColumn Availablility;
-        private DataGridViewTextBoxColumn Author;
         private Button btnBorrow;
         private Button btnReturn;
         private Button btnAdd;

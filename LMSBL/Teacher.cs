@@ -9,7 +9,7 @@ namespace LMSBL
 {
     public class Teacher : User
     {
-        public int BorrowLimit { get; } = 10;
+        public int BorrowLimit { get; set; } = 10;
         public override void DisplayRole()
         {
             Debug.WriteLine($"{Name} is a Teacher");
